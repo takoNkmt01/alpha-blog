@@ -1,6 +1,6 @@
 <%= render 'shared/errors', obj: @user %>
 
-<%= form_for @user do |f| %>
+<%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
    <form>
       <div class="form-group">
          <%= f.label :username %>
