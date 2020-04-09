@@ -1,0 +1,15 @@
+<%= render 'shared/errors', obj: @category %>
+
+<%= form_for(@category, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+   <form>
+      <div class="form-group">
+         <%= f.label :name %>
+         <%= f.text_field :name, class: "form-control", placeholder: "Category name", autofocus: true %>
+      </div>
+      <%= f.submit class: "btn btn-primary" %>
+   </form>
+<% end %>
+
+<div align="center">
+   [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+</div>
